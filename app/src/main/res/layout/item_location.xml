@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="3dp"
+    android:elevation="5dp"
+    android:orientation="horizontal">
+
+
+    <RelativeLayout
+        android:id="@+id/rlLocation"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bg_6dp_solid_stroke"
+        android:layout_toStartOf="@+id/rlFavorite"
+        android:paddingHorizontal="8dp">
+
+        <ImageView
+            android:id="@+id/imgEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/location_ic"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/imgEditProfile"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:importantForAutofill="no"
+            android:paddingTop="2dp"
+            android:singleLine="true"
+            android:text="Lahore"
+            android:textColor="@color/text1"
+            android:textSize="15sp"
+            tools:ignore="HardcodedText,LabelFor,RtlSymmetry,SmallSp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@+id/rlFavorite"
+        android:visibility="gone"
+        android:background="#979CA7" />
+
+    <RelativeLayout
+        android:id="@+id/rlFavorite"
+        android:layout_width="45dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bg_6dp_rounded">
+
+        <ImageView
+            android:id="@+id/ivFavoriteHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/favourite_unselected" />
+
+        <Button
+            android:id="@+id/btnFavorite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

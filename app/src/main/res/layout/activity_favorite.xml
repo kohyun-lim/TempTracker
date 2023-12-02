@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".FavoriteActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/NavigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_gravity="bottom"
+        android:background="#D5C8BB"
+        app:itemIconTint="#000000"
+        app:itemTextColor="#000000"
+        app:menu="@menu/bottom_navigation_menu"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/NavigationView"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="5dp"
+        android:clipToPadding="false" />
+
+</RelativeLayout>
